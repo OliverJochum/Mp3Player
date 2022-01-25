@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import uicomponents.ControlViewController?>
+<?import uicomponents.ProgressViewController?>
+<?import uicomponents.CoverViewController?>
+
+
+<fx:root xmlns="http://javafx.com/javafx/8.0.171"
+	xmlns:fx="http://javafx.com/fxml/1" type="BorderPane">
+	<center>
+		<VBox prefHeight="600.0" prefWidth="400.0"
+			BorderPane.alignment="CENTER" fx:id ="playerVBox">
+			<children>
+				<Pane prefHeight="370.0" prefWidth="400.0"
+					fx:id="coverPane">
+					<CoverViewController fx:id="coverView" />
+				</Pane>
+				<Pane prefHeight="50.0"
+					prefWidth="450.0" fx:id="progressPane">
+					<ProgressViewController fx:id="progressView" />
+				</Pane>
+				<Pane  prefHeight="80.0" prefWidth="400.0"
+					fx:id="controlPane">
+					<ControlViewController fx:id="controlView" />
+				</Pane>
+			</children>
+		</VBox>
+	</center>
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Settings" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="View">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Playlist" fx:id="playlistItem"/>
+						<MenuItem mnemonicParsing="false"
+							text="Select other playlists" fx:id="otherPlaylistsItem"/>
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+</fx:root>
